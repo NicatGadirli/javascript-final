@@ -17,8 +17,7 @@
         <div class="row">
           <div class="logo">
             <a href="./index.html">
-              <span>NI</span>
-              <span>CAT</span>
+              <img src="./assets/img/logo/Nicat-removebg-preview.png" alt="" />
             </a>
           </div>
           <nav class="navBar">
@@ -41,7 +40,7 @@
             </ul>
           </nav>
           <div class="profile">
-            <div class="profilePhoto">
+            <div class="profilePhoto" onclick="openprofileBar()">
               <img
                 src="./assets/img/photo_2023-05-30_18-09-55.jpg"
                 alt="profilePhoto"
@@ -49,13 +48,13 @@
             </div>
             <div class="profileBar">
               <h6>NICAT</h6>
-              <h6>nicatgadirli77@gmail.com</h6>
+              <a href="#" class="profileBarEmail">nicatgadirli77@gmail.com</a>
               <ul class="profileList">
                 <li class="profileItem">
                   <a href="#"
                     >MY ACCOUNTS<i class="fa-solid fa-chevron-up"></i
                   ></a>
-                  <ul class="profileItemDropDown">
+                  <ul class="profileItemDropDown" onclick="openprofileBar()">
                     <li>
                       <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </li>
@@ -79,16 +78,13 @@
     <!-- -------------------------- -->
     <!-- End webpage Header part -->
     <!-- ------------------------ -->
-    
 
-
-
-    
     <!-- -------------------------- -->
     <!-- Start webpage main part -->
     <!-- ------------------------ -->
     <main>
       <section class="home">
+        <div class="overlay"></div>
         <div class="container">
           <div class="row">
             <div class="homeInfo">
@@ -109,5 +105,6 @@
       src="https://kit.fontawesome.com/cbe6bd6ede.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

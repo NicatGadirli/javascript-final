@@ -9,6 +9,18 @@
   box-sizing: border-box;
   font-family: "Mukta", sans-serif;
 }
+body {
+  height: 2000px;
+}
+.scroll {
+  transition: all ease-in 0.6s;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.36);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 0;
+}
 
 .container {
   width: 100%;
@@ -74,11 +86,10 @@
 /*! Start webpage Header part */
 .header {
   width: 100%;
-  padding: 35px 0;
-  justify-content: space-around;
+  padding: 25px 0;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   z-index: 1;
 }
 
@@ -86,8 +97,14 @@
   justify-content: space-between;
 }
 
-.logo a{
-  color: #fff;
+.logo {
+  width: 152px;
+  height: 45px;
+}
+
+.logo a img {
+  width: 100%;
+  height: 100%;
 }
 
 .navList {
@@ -107,13 +124,63 @@
 }
 
 .profilePhoto img {
-  display: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
 
 .profileBar {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  background: #000;
+  width: 230px;
+  margin-top: 60px;
+  padding: 15px;
+  z-index: 99;
+  box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.86);
+  max-height: 400px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
   display: none;
 }
+.profileBar h6 {
+  margin-bottom: 10px;
+}
+
+.profileItem a{
+  color: #fff;
+}
+
+.profileBarEmail {
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.profileList {
+  margin-top: 20px;
+}
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+
+.active {
+  display: block;
+}
+
 /* !End webpage Header part  */
+/* !Start  */
 .home {
   height: 100vh;
   min-height: 800px;
@@ -133,7 +200,6 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
-
 .homeInfo {
   display: flex;
   justify-content: center;
@@ -151,4 +217,3 @@
   animation: introText 2s ease-out 0s 1 alternate forwards;
   word-spacing: 4px;
 }
-
