@@ -180,7 +180,7 @@ body {
 }
 
 /* !End webpage Header part  */
-/* !Start  */
+/* !Start Home Section  */
 .home {
   height: 100vh;
   min-height: 800px;
@@ -217,3 +217,14 @@ body {
   animation: introText 2s ease-out 0s 1 alternate forwards;
   word-spacing: 4px;
 }
+
+/* !End Home Section  */
+/* !Start Projects Section  */
+
+.swiper-slide img{
+  background-position: center center;
+  background-size: cover;
+}
+
+
+/* !End Projects Section  */
