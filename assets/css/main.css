@@ -1,0 +1,157 @@
+/*? Import website fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+}
+
+.row {
+  display: flex;
+}
+
+/*? Start Keyframe for Intro Text */
+
+@keyframes introText {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+/*? End introtext keyframe */
+
+/*! Start webpage Header part */
+.header {
+  width: 100%;
+  padding: 35px 0;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+}
+
+.row {
+  justify-content: space-between;
+}
+
+.logo a{
+  color: #fff;
+}
+
+.navList {
+  display: flex;
+  gap: 30px;
+}
+
+.navItem a {
+  color: whitesmoke;
+  transition: all ease-in 0.6s;
+  font-size: 20px;
+}
+
+.navItem a:hover {
+  color: #060930;
+  text-decoration: underline solid;
+}
+
+.profilePhoto img {
+  display: none;
+}
+
+.profileBar {
+  display: none;
+}
+/* !End webpage Header part  */
+.home {
+  height: 100vh;
+  min-height: 800px;
+  background-image: url(../img/homesectionbackgroundimg.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% -25px;
+}
+
+.home::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -266px;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+.homeInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+  text-align: center;
+  width: 100%;
+}
+
+.homeTitle {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 6px 9px 16px #a6b2ec;
+  animation: introText 2s ease-out 0s 1 alternate forwards;
+  word-spacing: 4px;
+}
+
+.homeTitle span{
+  
+}
