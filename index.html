@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
@@ -32,24 +33,24 @@
           <nav class="navBar">
             <ul class="navList">
               <li class="navItem">
-                <a href="./index.html">HOME</a>
+                <a href="#home">HOME</a>
               </li>
               <li class="navItem">
-                <a href="#">PROJECTS</a>
+                <a href="#projects">PROJECTS</a>
               </li>
               <li class="navItem">
-                <a href="#">RESUME</a>
+                <a href="#resume">RESUME</a>
               </li>
               <li class="navItem">
-                <a href="#">ABOUT</a>
+                <a href="#about">ABOUT</a>
               </li>
               <li class="navItem">
-                <a href="#">CONTACT</a>
+                <a href="#contact">CONTACT</a>
               </li>
             </ul>
           </nav>
           <div class="profile">
-            <div class="profilePhoto" onclick="openprofileBar()">
+            <div class="profilePhoto" id="photo_btn" onclick="openprofileBar()">
               <img
                 src="./assets/img/photo_2023-05-30_18-09-55.jpg"
                 alt="profilePhoto"
@@ -60,21 +61,29 @@
               <a href="#" class="profileBarEmail">nicatgadirli77@gmail.com</a>
               <ul class="profileList">
                 <li class="profileItem">
-                  <a href="#"
-                    >MY ACCOUNTS<i class="fa-solid fa-chevron-up"></i
-                  ></a>
-                  <ul class="profileItemDropDown" onclick="openprofileBar()">
+                  <span id="account_btn">
+                    MY ACCOUNTS<i class="fa-solid fa-chevron-up" id="arrow"></i
+                  ></span>
+                  <ul class="profileItemDropDown">
                     <li>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#"
+                        ><i class="fa-brands fa-instagram"></i>INSTAGRAM</a
+                      >
                     </li>
                     <li>
-                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                      <a href="#"
+                        ><i class="fa-brands fa-facebook-f"></i>FACEBOOK</a
+                      >
                     </li>
                     <li>
-                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                      <a href="#"
+                        ><i class="fa-brands fa-twitter"></i>TWITTER</a
+                      >
                     </li>
                     <li>
-                      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                      <a href="#"
+                        ><i class="fa-brands fa-linkedin-in"></i>LINKEDIN</a
+                      >
                     </li>
                   </ul>
                 </li>
@@ -93,7 +102,7 @@
     <!-- ------------------------ -->
     <main>
       <!-- Start Home Section -->
-      <section class="home">
+      <section class="home" id="home">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
@@ -101,8 +110,7 @@
               <h1 class="homeTitle">
                 Hello, I'm
                 <br />
-                NICAT GADIRLI
-                <br />
+                <p class="name"></p>
                 AND THIS IS MY PORTFOLIO PAGE
               </h1>
             </div>
@@ -111,8 +119,11 @@
       </section>
       <!-- End Home Section -->
       <!-- Start Projects Section -->
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="container">
+          <div class="info">
+            <h2 class="title">PROJECTS</h2>
+          </div>
           <div class="row">
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
@@ -141,18 +152,100 @@
                   />
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
       </section>
       <!-- End Projects Section -->
+      <!-- Start Resume Section -->
+      <section class="resume" id="resume">
+        <div class="container">
+          <div class="info">
+            <h2 class="title">RESUME</h2>
+          </div>
+          <div class="resumeImg">
+            <img src="./assets/img/resumeimg.png" alt="resumeimg" />
+          </div>
+          <div class="row">
+            <div class="tab">
+              <button class="tablinks active" onclick="openTab(event, 'tab1')">
+                ABOUT ME
+              </button>
+              <button class="tablinks" onclick="openTab(event, 'tab2')">
+                MY SKILLS
+              </button>
+            </div>
+            <div id="tab1" class="tabcontent open">
+              <p class="contentText">
+                Hello. My name is Nijat. I am 18 years old. I am a 2nd year
+                student of the Azerbaijan State Oil and Industry University. I
+                am also studying frontend in the Technoera course. In addition,
+                playing football and learning programming are my hobbies.
+              </p>
+            </div>
+            <div id="tab2" class="tabcontent">
+              <p class="contentText">
+                I know HTML, CSS, JS, C++, MySQL. Besides that, I'm learning
+                react, phtyon
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End  Resume Section -->
+      <!-- Start About Section -->
+      <section class="cardSection">
+        <div class="container">
+          <div class="info">
+            <h2 class="title">ABOUT</h2>
+          </div>
+          <div id="cardContainer"></div>
+        </div>
+      </section>
+      <!-- End About Section -->
+      <!-- Start Contact Section -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="info">
+            <h2 class="title">CONTACT</h2>
+          </div>
+          <div class="row">
+            <form id="registration-form">
+              <div class="form-group">
+                <label for="name">Ad:</label>
+                <input type="text" id="name" name="name" />
+                <div id="name-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="surname">Soyad:</label>
+                <input type="text" id="surname" name="surname" />
+                <div id="surname-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="email">Elektron poçt:</label>
+                <input type="email" id="email" name="email" />
+                <div id="email-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="password">Şifrə:</label>
+                <input type="password" id="password" name="password" />
+                <div id="password-error" class="error-message"></div>
+              </div>
+              <button type="submit" id="registerBtn" class="button">Qeydiyyatdan keç</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
     </main>
     <!-- -------------------------- -->
     <!-- End webpage main part -->
     <!-- ------------------------ -->
+
+    <!-- ? Swal -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- ? Swal -->
     <!--? Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!--? Swiper JS -->
@@ -161,6 +254,7 @@
       src="https://kit.fontawesome.com/cbe6bd6ede.js"
       crossorigin="anonymous"
     ></script>
+
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
